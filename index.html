@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="tr" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yaşar Kemal - Türk Edebiyatının Ustası</title>
+    <!-- Tailwind CSS CDN --><script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts - Inter & Merriweather (Başlıklar için) --><link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8fafc; /* Hafif gri arka plan */
+        }
+        h1, h2, h3 {
+            font-family: 'Merriweather', serif;
+        }
+        /* Parallax Efekti için ana sınıf */
+        .parallax {
+            /* Arka plan görselini viewport'a göre sabitler */
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        /* Sayfa kaydırıldıkça gelen animasyon */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+        }
+        .fade-in.show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        /* Kitap kartı hover efekti (daha sade) */
+        .book-card {
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+        }
+        .book-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Metin Gölgesi (Tailwind'de yoksa manuel ekleme) */
+        .text-shadow-lg {
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7); /* Büyük ve belirgin gölge */
+        }
+    </style>
+</head>
+<body class="text-gray-900 antialiased">
+
+    <!-- Header / Navbar --><header class="bg-white shadow-lg sticky top-0 z-50 transition-all duration-300">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="text-3xl font-bold text-gray-900 tracking-wide">
+                <span class="text-blue-600">YAŞAR</span> KEMAL
+            </a>
+            <div class="hidden md:flex space-x-8">
+                <a href="#hayati" class="text-lg text-gray-600 hover:text-blue-600 font-medium transition duration-300">Hayatı</a>
+                <a href="#edebi-kisilik" class="text-lg text-gray-600 hover:text-blue-600 font-medium transition duration-300">Edebi Kişiliği</a>
+                <a href="#eserleri" class="text-lg text-gray-600 hover:text-blue-600 font-medium transition duration-300">Eserleri</a>
+                <a href="#mirasi" class="text-lg text-gray-600 hover:text-blue-600 font-medium transition duration-300">Mirası</a>
+            </div>
+            <!-- Mobil Menü Butonu (Görsel amaçlı, işlevsiz) --><button class="md:hidden text-gray-700 hover:text-blue-600 focus:outline-none">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+                </svg>
+            </button>
+        </nav>
+    </header>
+
+    <!-- Ana İçerik --><main>
+
+        <!-- Hero Bölümü (Video Arka Plan) --><section class="h-screen min-h-[700px] relative flex items-center justify-center text-white overflow-hidden">
+            <!-- Arka Plan Videosu --><video
+                src="https://videos.pexels.com/video-files/2097414/2097414-hd_1920_1080_25fps.mp4"
+                autoplay
+                loop
+                muted
+                playsinline
+                class="absolute z-0 inset-0 w-full h-full object-cover"
+            ></video>
+            <!-- Karanlık filtre --><div class="absolute inset-0 bg-black/60 z-10"></div>
+            <!-- Metin İçeriği --><div class="relative z-20 text-center p-6 fade-in show">
+                <h1 class="text-6xl md:text-8xl font-extrabold leading-tight mb-6 text-shadow-lg">
+                    Yaşar Kemal
+                </h1>
+                <p class="text-2xl md:text-3xl font-light text-gray-200 mb-10 max-w-2xl mx-auto text-shadow-lg">
+                    Sözcüklerin sihirbazı, Anadolu'nun sesi, insanlığın evrensel vicdanı.
+                </p>
+                <a href="#hayati" class="inline-block bg-blue-600 text-white font-semibold text-xl px-10 py-4 rounded-lg shadow-lg hover:bg-blue-700 transform hover:scale-105 transition duration-300 ease-in-out">
+                    Hikayesini Keşfet
+                </a>
+            </div>
+        </section>
+
+        <!-- Hayatı Bölümü (İçerik) --><section id="hayati" class="scroll-mt-20 py-24 bg-white">
+            <div class="container mx-auto px-6">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                    <div class="fade-in">
+                        <h2 class="text-4xl font-extrabold text-gray-900 mb-6 border-b-4 border-blue-500 pb-3 inline-block">Hayatı <span class="text-blue-600">ve Yolculuğu</span></h2>
+                        <div class="space-y-6 text-lg text-gray-700 leading-relaxed">
+                            <p>Asıl adı Kemal Sadık Gökçeli olan Yaşar Kemal, 1923 yılında Adana'nın Osmaniye ilçesine bağlı Hemite (şimdiki Gökçedam) köyünde doğdu. Küçük yaşta yaşadığı trajik olaylar, onun dünya görüşünü derinden etkiledi: Bir kaza sonucu sağ gözünü kaybetti ve babasının camide öldürülmesine tanık oldu.</p>
+                            <p>İlkokulu köyünde bitirdikten sonra, ortaokul ikinci sınıfta okulu bırakmak zorunda kaldı. Irgatlık, traktör şoförlüğü, pamuk toplayıcılığı gibi 40'a yakın farklı işte çalıştı. Bu zorlu süreç, onun Anadolu insanının yaşamına, kültürüne ve diline derinden nüfuz etmesini sağladı. Köylülerin sözlü geleneği, destanlar ve halk hikayeleri onun en büyük ilham kaynaklarından oldu.</p>
+                            <p>1951 yılında İstanbul'a taşınarak Cumhuriyet gazetesinde röportaj yazarı olarak çalışmaya başladı ve "Yaşar Kemal" adını kullandı. 1955'te yayımlanan başyapıtı "İnce Memed" ile tüm dünyada büyük bir üne kavuştu.</p>
+                        </div>
+                    </div>
+                    <div class="relative group fade-in" style="animation-delay: 0.2s;">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/97/%C3%87ukurova_%C3%9Cniversitesi_Manzaralar_1.jpg/2560px-%C3%87ukurova_%C3%9Cniversitesi_Manzaralar_1.jpg" 
+                             alt="Çukurova Manzarası" 
+                             class="rounded-xl shadow-2xl transform transition-transform duration-500 group-hover:scale-105 border-4 border-gray-100 w-full h-auto object-cover max-h-96"
+                             onerror="this.src='https://placehold.co/600x400/cccccc/333?text=Çukurova+Manzarası';">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Parallax Bölücü 1 --><div class="h-96 relative parallax" style="background-image: url('https://cdn.pixabay.com/photo/2016/03/26/13/09/workspace-1280538_1280.jpg');">
+            <div class="absolute inset-0 bg-black/50 z-10"></div>
+            <div class="relative z-20 h-full flex items-center justify-center">
+                <blockquote class="text-3xl md:text-4xl text-white italic font-light text-center max-w-3xl mx-auto p-4 text-shadow-lg">
+                    "İnsan düşünen bir varlıktır. Düşündüğü için de ölümsüzdür."
+                </blockquote>
+            </div>
+        </div>
+
+        <!-- Edebi Kişiliği Bölümü (İçerik) --><section id="edebi-kisilik" class="scroll-mt-20 py-24 bg-gray-50">
+            <div class="container mx-auto px-6">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                    <div class="relative group fade-in order-2 md:order-1">
+                        <img src="https://cdn.oggito.com/images/full/2019/2/yasarkamall3.jpg" 
+                             alt="Yaşar Kemal Yazarken" 
+                             class="rounded-xl shadow-2xl transform transition-transform duration-500 group-hover:scale-105 border-4 border-white w-full h-auto object-cover max-h-96"
+                             onerror="this.src='https://placehold.co/600x400/cccccc/333?text=Yaşar+Kemal+Portre';">
+                    </div>
+                    <div class="space-y-6 text-lg text-gray-700 leading-relaxed order-1 md:order-2 fade-in" style="animation-delay: 0.2s;">
+                        <h2 class="text-4xl font-extrabold text-gray-900 mb-6 border-b-4 border-blue-500 pb-3 inline-block">Edebi <span class="text-blue-600">Kişiliği</span></h2>
+                        <p><strong><span class="text-gray-800">Doğa ve İnsan:</span></strong> Eserlerinde doğayı sadece bir fon değil, yaşayan, nefes alan bir karakter olarak ele alır. İnsanın doğayla kurduğu kadim ilişki, doğanın acımasız talanı ve bu talana karşı verilen direniş, romanlarının en temel izleklerindendir.</p>
+                        <p><strong><span class="text-gray-800">Destansı Anlatım:</span></strong> Modern roman tekniğini, Anadolu'nun zengin sözlü geleneği, mitolojileri, efsaneleri ve halk hikayeleriyle eşsiz bir şekilde harmanlar. Lirik, şiirsel ve destansı bir dil kullanarak, okuyucuyu büyülü bir dünyaya davet eder.</p>
+                        <p><strong><span class="text-gray-800">Toplumsal Adalet:</span></strong> Ağa-köylü çatışması, yoksulluk, sömürü ve "ezilen insanın" zulme karşı başkaldırısı, eserlerinde sıkça ve cesurca yer bulur. "İnce Memed", bu başkaldırının ve adalet arayışının evrensel simgesi haline gelmiştir.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Parallax Bölücü 2 (Yeni Yaşar Kemal Portresi) --><div class="h-96 relative parallax" style="background-image: url('https://www.cumhuriyet.com.tr/Archive/2022/2/28/1908489_resource/yasar_kemal_portre.jpg'); background-position: top center;">
+            <div class="absolute inset-0 bg-black/30 z-10"></div>
+        </div>
+
+        <!-- Eserleri Bölümü --><section id="eserleri" class="scroll-mt-20 py-24 bg-white">
+            <div class="container mx-auto px-6">
+                <div class="text-center max-w-3xl mx-auto mb-16 fade-in">
+                    <h2 class="text-4xl font-extrabold text-gray-900 mb-6">Başlıca <span class="text-blue-600">Eserleri</span></h2>
+                    <p class="text-xl text-gray-700 leading-relaxed">
+                        Yaşar Kemal'in külliyatı, Anadolu'nun sesini dünyaya taşıyan roman, öykü ve röportajlarla doludur. İşte onun edebiyat dünyasına damga vurmuş bazı başyapıtları:
+                    </p>
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    
+                    <!-- Eser Kartı 1 --><div class="book-card bg-white p-6 rounded-lg shadow-lg border border-gray-100 flex flex-col items-center text-center fade-in" style="animation-delay: 0s;">
+                        <img src="https://img.kitapyurdu.com/v1/getImage/fn:1134079/wh:true/wi:220" 
+                             alt="İnce Memed Kitap Kapağı" 
+                             class="w-40 h-56 object-contain mb-5 rounded shadow-md"
+                             onerror="this.src='https://placehold.co/150x220/a78bfa/fff?text=İnce+Memed';">
+                        <h3 class="text-2xl font-semibold text-gray-800 mb-2">İnce Memed</h3>
+                        <p class="text-gray-600 text-base">Haksızlığa karşı dağa çıkan bir köy gencinin efsanevi direniş hikayesi. Yazarın başyapıtıdır.</p>
+                    </div>
+                    
+                    <!-- Eser Kartı 2 --><div class="book-card bg-white p-6 rounded-lg shadow-lg border border-gray-100 flex flex-col items-center text-center fade-in" style="animation-delay: 0.2s;">
+                        <img src="https://img.kitapyurdu.com/v1/getImage/fn:1134080/wh:true/wi:220" 
+                             alt="Yer Demir Gök Bakır Kitap Kapağı" 
+                             class="w-40 h-56 object-contain mb-5 rounded shadow-md"
+                             onerror="this.src='https://placehold.co/150x220/c084fc/fff?text=Yer+Demir+Gök+Bakır';">
+                        <h3 class="text-2xl font-semibold text-gray-800 mb-2">Yer Demir Gök Bakır</h3>
+                        <p class="text-gray-600 text-base">Bir köy halkının yoksulluk ve çaresizlik içinde sığındığı bir "ermiş" yaratma sürecini anlatır.</p>
+                    </div>
+                    
+                    <!-- Eser Kartı 3 --><div class="book-card bg-white p-6 rounded-lg shadow-lg border border-gray-100 flex flex-col items-center text-center fade-in" style="animation-delay: 0.4s;">
+                        <img src="https://img.kitapyurdu.com/v1/getImage/fn:1134091/wh:true/wi:220" 
+                             alt="Yılanı Öldürseler Kitap Kapağı" 
+                             class="w-40 h-56 object-contain mb-5 rounded shadow-md"
+                             onerror="this.src='https://placehold.co/150x220/e879f9/fff?text=Yılanı+Öldürseler';">
+                        <h3 class="text-2xl font-semibold text-gray-800 mb-2">Yılanı Öldürseler</h3>
+                        <p class="text-gray-600 text-base">Töre ve kan davası kıskacında kalan bir çocuğun trajik hikayesi. Sinemaya da uyarlanmıştır.</p>
+                    </div>
+                    
+                    <!-- Eser Kartı 4 --><div class="book-card bg-white p-6 rounded-lg shadow-lg border border-gray-100 flex flex-col items-center text-center fade-in" style="animation-delay: 0.6s;">
+                        <img src="https://img.kitapyurdu.com/v1/getImage/fn:1134094/wh:true/wi:220" 
+                             alt="Teneke Kitap Kapağı" 
+                             class="w-40 h-56 object-contain mb-5 rounded shadow-md"
+                             onerror="this.src='https://placehold.co/150x220/f472b6/fff?text=Teneke';">
+                        <h3 class="text-2xl font-semibold text-gray-800 mb-2">Teneke</h3>
+                        <p class="text-gray-600 text-base">Çeltik ağalarına karşı mücadele eden idealist bir genç kaymakamın öyküsü. Sistem eleştirisi sunar.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Mirası Bölümü --><section id="mirasi" class="scroll-mt-20 py-24 bg-gray-50">
+            <div class="container mx-auto px-6">
+                <div class="max-w-4xl mx-auto fade-in">
+                    <h2 class="text-4xl font-extrabold text-gray-900 mb-8 text-center">Mirası <span class="text-blue-600">ve Önemi</span></h2>
+                    <div class="space-y-6 text-lg text-gray-700 leading-relaxed text-center">
+                        <p>Yaşar Kemal, sadece Türkiye'nin değil, dünyanın en önemli edebiyatçılarından biri olarak kabul edilmektedir. Nobel Edebiyat Ödülü'ne defalarca aday gösterilmesi, onun evrensel çapta tanınan bir yazar olduğunun göstergesidir.</p>
+                        <p>Eserleriyle Anadolu'nun zengin kültürünü, folklorunu ve insanının derinliğini tüm dünyaya duyurmuştur. Onun mirası, doğaya saygıyı, toplumsal adaleti ve her koşulda "iyi insan" olma erdemini savunan güçlü bir edebiyattır. Bugün "Yaşar Kemal" adı, cesaretin, vicdanın ve umudun sembolü olarak yaşamaya devam etmektedir.</p>
+                    </div>
+                    <div class="mt-12 text-center">
+                        <blockquote class="text-xl md:text-2xl italic font-medium text-gray-800 bg-blue-50 p-8 rounded-lg shadow-inner border-l-4 border-blue-400">
+                            "Benimkisi bir ağacınkine benzer. Köklerimden biri Mezopotamya'da, biri Kelt'te, biri Kafkasya'da, biri Anadolu'da... Ben bu dünyadanım. Bu dünyayı ve insanlarını, böceklerini, çiçeklerini, sularını sevdim."
+                            <footer class="mt-4 text-lg text-blue-700 font-semibold">— Yaşar Kemal</footer>
+                        </blockquote>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer --><footer class="bg-gray-900 text-gray-400 mt-20 py-12">
+        <div class="container mx-auto px-6 text-center">
+            <p class="text-lg mb-2 text-gray-300">&copy; 2025 Yaşar Kemal Anma Sayfası.</p>
+            <p class="text-sm">Türk Edebiyatının Büyük Ustasına Saygıyla.</p>
+            <div class="mt-6 flex justify-center space-x-6">
+                <a href="#" class="text-gray-400 hover:text-white transition duration-300" aria-label="LinkedIn">
+                    <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                    </svg>
+                </a>
+                <a href="#" class="text-gray-400 hover:text-white transition duration-300" aria-label="Twitter">
+                    <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.797-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.593 0-6.492 2.901-6.492 6.492 0 .509.058 1.007.163 1.489-5.392-.27-10.197-2.868-13.407-6.819-.563.97-.886 2.09-.886 3.303 0 2.278 1.159 4.287 2.919 5.465-.858-.024-1.672-.265-2.384-.62v.08c0 3.15 2.259 5.786 5.262 6.385-.47.124-.964.192-1.473.192-.362 0-.715-.037-1.057-.1.834 2.606 3.255 4.504 6.104 4.554-2.261 1.776-5.094 2.848-8.195 2.848-.53 0-1.053-.031-1.566-.092 2.924 1.878 6.079 2.971 9.637 2.971 11.549 0 17.848-9.539 17.848-17.848 0-.271-.01-.54-.027-.807.97-.7 1.803-1.583 2.474-2.587z"/>
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript for Animations --><script>
+        document.addEventListener("DOMContentLoaded", function() {
+            // Sayfa yüklendiğinde "show" class'ı olmayan tüm ".fade-in" öğelerini seç
+            const faders = document.querySelectorAll(".fade-in:not(.show)");
+
+            const appearOptions = {
+                threshold: 0.1, // Öğenin %10'u göründüğünde
+                rootMargin: "0px 0px -50px 0px" // Ekranın altından 50px yukarıda tetikle
+            };
+
+            const appearOnScroll = new IntersectionObserver(function(entries, appearOnScroll) {
+                entries.forEach(entry => {
+                    if (!entry.isIntersecting) {
+                        return; // Görünmüyorsa bir şey yapma
+                    } else {
+                        entry.target.classList.add("show"); // Görünüyorsa "show" class'ını ekle
+                        appearOnScroll.unobserve(entry.target); // Animasyon bir kez çalışsın, gözlemlemeyi bırak
+                    }
+                });
+            }, appearOptions);
+
+            // Tüm fader öğelerini gözlemle
+            faders.forEach(fader => {
+                appearOnScroll.observe(fader);
+            });
+        });
+    </script>
+</body>
+</html>
